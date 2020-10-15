@@ -1,7 +1,6 @@
 package com.taoh.nlw3.happy.entities;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.Instant;
 
 import javax.persistence.Column;
@@ -15,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_orphanages")
-public class Orphanages implements Serializable {
+public class Orphanage implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -30,10 +29,10 @@ public class Orphanages implements Serializable {
 	private Instant updatedAt;
 
 	@Column(precision = 2, scale = 10)
-	private BigDecimal latitude;
+	private Double latitude;
 
 	@Column(precision = 2, scale = 10)
-	private BigDecimal longitude;
+	private Double longitude;
 
 	@Column(columnDefinition = "TEXT")
 	private String about;
@@ -45,10 +44,10 @@ public class Orphanages implements Serializable {
 
 	private boolean open_on_weekends;
 
-	public Orphanages() {
+	public Orphanage() {
 	}
 
-	public Orphanages(String name, BigDecimal latitude, BigDecimal longitude, String about, String instructions,
+	public Orphanage(String name, Double latitude, Double longitude, String about, String instructions,
 			String opening_hours, boolean open_on_weekends) {
 		this.name = name;
 		this.latitude = latitude;
@@ -93,19 +92,19 @@ public class Orphanages implements Serializable {
 		return updatedAt;
 	}
 
-	public BigDecimal getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(BigDecimal latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 
-	public BigDecimal getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(BigDecimal longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 
@@ -157,7 +156,7 @@ public class Orphanages implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Orphanages other = (Orphanages) obj;
+		Orphanage other = (Orphanage) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
