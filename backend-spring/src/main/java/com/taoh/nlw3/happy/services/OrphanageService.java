@@ -1,6 +1,7 @@
 package com.taoh.nlw3.happy.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.transaction.annotation.Transactional;
@@ -35,6 +36,13 @@ public class OrphanageService {
 		entity.setOpening_hours(dto.getOpening_hours());
 		entity.setOpen_on_weekends(dto.isOpen_on_weekends());
 		entity = repository.save(entity);
+		return new OrphanageDTO(entity);
+	}
+
+	@Transactional(readOnly = true)
+	public OrphanageDTO findById(Long id) {
+		Optional<Orphanage> obj = repository.findById(id);
+		Orphanage entity = obj.orElseThrow(); //TODO adicionar exception.
 		return new OrphanageDTO(entity);
 	}
 	
