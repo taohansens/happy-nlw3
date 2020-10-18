@@ -24,7 +24,7 @@ export default {
 
         const orphanagesRepository = getRepository(Orphanage);
 
-        const orphanage = await orphanagesRepository.findOneOrFail(id, {relations: 'images'});
+        const orphanage = await orphanagesRepository.findOneOrFail(id, {relations: ['images']});
 
         return response.json(orphanageView.render(orphanage));
     },
