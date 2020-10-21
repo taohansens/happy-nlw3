@@ -48,7 +48,7 @@ export default function OrphanageData() {
 
         await api.post('orphanages', data);
 
-        navigation.navigate('OrphanagesMap')
+        navigation.navigate('OrphanagesMap');
     }
 
     async function handleSelectImages() {
@@ -100,15 +100,15 @@ export default function OrphanageData() {
             <Text style={styles.label}>Fotos</Text>
 
             <View style={styles.uploadedImagesContainer}>
-                {images.map(image => {
+                {images.map((image) => {
                     return (
                         <Image
                             key={image}
-                            source={{ uri: image }}
                             style={styles.uploadedImage}
+                            source={{ uri: image }}
                         />
                     );
-                })};
+                })}
             </View>
 
             <TouchableOpacity style={styles.imagesInput} onPress={handleSelectImages}>
