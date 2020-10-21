@@ -4,7 +4,8 @@
 
 ---
 
-<h1 align="center">Next Level Week, terceira edição, projeto "Happy". 🥳</h1>
+<h1 align="center">Projeto "Happy". 🥳</h1>
+<h3>Next Level Week #3</h3>
 
 ---
 
