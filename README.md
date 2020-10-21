@@ -30,9 +30,9 @@
 
    <p align="center">
       <img src="https://github.com/taohansens/happy-nlw3/blob/master/web/public/images/webLandingPage.png?raw=true" width="90%" alt="Happy Demo"/>
-      <p></p>
+      .
       <img src="https://github.com/taohansens/happy-nlw3/blob/master/web/public/images/webMap.png?raw=true" width="90%" alt="Happy Demo"/>
-      <p></p>
+      .
       <img src="https://github.com/taohansens/happy-nlw3/blob/master/web/public/images/mobileMap.png?raw=true" width="40%" alt="Happy Demo"/>
    
    </p>
